@@ -7,7 +7,6 @@ const services = [
   "Managed Review",
   "eDiscovery Staffing",
   "Trial Prep",
-  "Courtroom Reporting & Deposition Services",
   "Cyber Data Breach & Incident Response Services",
   "Legal Operations & Spend Analysis",
   "AI Discovery Services",
