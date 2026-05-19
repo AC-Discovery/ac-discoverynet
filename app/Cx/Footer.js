@@ -10,7 +10,6 @@ const services = [
   "Cyber Data Breach & Incident Response Services"
   "Legal Operations & Spend Analysis",
   "AI Discovery Services",
-  "Flexible Legal Talent Solutions",
 ];
 
 const forensics = [
