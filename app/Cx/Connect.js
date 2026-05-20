@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const logos = [
   { src: "/relativity.png", alt: "Relativity", w: 1998, h: 545 },
@@ -52,6 +55,32 @@ function FormField({ id, label, type = "text", required = false }) {
 }
 
 function ContactForm() {
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    const body = Object.fromEntries(new FormData(e.currentTarget));
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Something went wrong.");
+      setStatus("success");
+      e.currentTarget.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(err.message);
+    }
+  }
+
   return (
     <section className="bg-black px-4 sm:px-6 lg:px-10 py-10 md:py-16">
       <div className="mx-auto max-w-7xl rounded-[28px] md:rounded-[36px] bg-[#2a2d33] px-6 sm:px-10 md:px-14 lg:px-16 py-10 md:py-14 lg:py-16">
@@ -64,7 +93,10 @@ function ContactForm() {
             </h2>
           </div>
 
-          <form className="md:col-span-8 lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
+          <form
+            onSubmit={handleSubmit}
+            className="md:col-span-8 lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7"
+          >
             <FormField id="firstName" label="First Name" required />
             <FormField id="lastName" label="Last Name" required />
             <FormField id="email" label="Email Address" type="email" required />
@@ -72,24 +104,33 @@ function ContactForm() {
             <FormField id="company" label="Company Name" />
             <div className="sm:col-span-2 flex flex-col">
               <label
-                htmlFor="message"
+                htmlFor="comments"
                 className="text-white/40 text-sm mb-2"
               >
                 Comment or Message
               </label>
               <textarea
-                id="message"
-                name="message"
+                id="comments"
+                name="comments"
                 rows={3}
                 className="bg-transparent text-white text-sm placeholder:text-white/40 border-0 border-b border-white/30 focus:border-white/70 focus:outline-none pb-2 pt-1 resize-none"
               />
             </div>
-            <div className="sm:col-span-2 mt-2">
+            <div className="sm:col-span-2 mt-2 flex flex-col gap-3">
+              {status === "success" && (
+                <p className="text-green-400 text-sm">
+                  Thank you — your message has been sent.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-400 text-sm">{errorMessage}</p>
+              )}
               <button
                 type="submit"
-                className="bg-[#095786] hover:bg-[#2484C6] transition-colors text-white text-sm font-medium px-8 py-2.5 rounded-md"
+                disabled={status === "loading"}
+                className="bg-[#095786] hover:bg-[#2484C6] disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-white text-sm font-medium px-8 py-2.5 rounded-md w-fit"
               >
-                Submit
+                {status === "loading" ? "Sending…" : "Submit"}
               </button>
             </div>
           </form>
