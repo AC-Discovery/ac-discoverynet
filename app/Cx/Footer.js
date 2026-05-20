@@ -7,7 +7,7 @@ const services = [
   "Managed Review",
   "eDiscovery Staffing",
   "Trial Prep",
-  "Cyber Data Breach & Incident Response Services"
+  "Cyber Data Breach & Incident Response Services",
   "Legal Operations & Spend Analysis",
   "AI Discovery Services",
 ];
