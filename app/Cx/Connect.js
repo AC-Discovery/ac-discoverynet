@@ -60,10 +60,11 @@ function ContactForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("loading");
     setErrorMessage("");
 
-    const body = Object.fromEntries(new FormData(e.currentTarget));
+    const body = Object.fromEntries(new FormData(form));
 
     try {
       const res = await fetch("/api/contact", {
@@ -74,7 +75,7 @@ function ContactForm() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Something went wrong.");
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset();
     } catch (err) {
       setStatus("error");
       setErrorMessage(err.message);

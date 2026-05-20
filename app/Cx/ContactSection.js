@@ -39,10 +39,11 @@ export default function ContactSection() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("loading");
     setErrorMessage("");
 
-    const body = Object.fromEntries(new FormData(e.currentTarget));
+    const body = Object.fromEntries(new FormData(form));
 
     try {
       const res = await fetch("/api/contact", {
@@ -53,7 +54,7 @@ export default function ContactSection() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Something went wrong.");
       setStatus("success");
-      e.currentTarget.reset();
+      form.reset();
     } catch (err) {
       setStatus("error");
       setErrorMessage(err.message);
@@ -67,66 +68,43 @@ export default function ContactSection() {
           Let&apos;s <span className="text-[#2484C6]">Connect</span>
         </h1>
 
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-5 md:flex-row md:justify-center md:gap-3 lg:gap-4 md:items-start">
-            <div className="w-full max-w-md shrink-0">
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4"
-              >
-                <FormField id="firstName" label="First Name" required />
-                <FormField id="lastName" label="Last Name" required />
-                <FormField id="email" label="Email Address" type="email" required />
-                <FormField id="phone" label="Phone" type="tel" />
-                <div className="sm:col-span-2">
-                  <FormField id="company" label="Company Name" />
-                </div>
-                <div className="sm:col-span-2">
-                  <FormField id="comments" label="Comments" textarea />
-                </div>
-                <div className="sm:col-span-2 mt-2 flex justify-center">
-                  <button
-                    type="submit"
-                    className="bg-[#095786] hover:bg-[#2484C6] transition-colors text-white text-sm font-semibold tracking-wide uppercase px-10 py-3 rounded-md shadow-lg shadow-blue-900/30"
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-
-        <form
-          onSubmit={handleSubmit}
-          className="mt-12 md:mt-14 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5"
-        >
-          <FormField id="firstName" label="First Name" required />
-          <FormField id="lastName" label="Last Name" required />
-          <FormField id="email" label="Email Address" type="email" required />
-          <FormField id="phone" label="Phone" type="tel" />
-          <div className="sm:col-span-2">
-            <FormField id="company" label="Company Name" />
-          </div>
-          <div className="sm:col-span-2">
-            <FormField id="comments" label="Comments" textarea />
-          </div>
-          <div className="sm:col-span-2 mt-2 flex flex-col items-center gap-3">
-            {status === "success" && (
-              <p className="text-green-400 text-sm text-center">
-                Thank you — your message has been sent.
-              </p>
-            )}
-            {status === "error" && (
-              <p className="text-red-400 text-sm text-center">{errorMessage}</p>
-            )}
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="bg-[#095786] hover:bg-[#2484C6] disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-white text-sm font-semibold tracking-wide uppercase px-10 py-3 rounded-md shadow-lg shadow-blue-900/30"
+        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 md:flex-row md:justify-center md:gap-10 lg:gap-14 md:items-start">
+          <div className="w-full max-w-md shrink-0">
+            <form
+              onSubmit={handleSubmit}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4"
             >
-              {status === "loading" ? "Sending…" : "Submit"}
-            </button>
+              <FormField id="firstName" label="First Name" required />
+              <FormField id="lastName" label="Last Name" required />
+              <FormField id="email" label="Email Address" type="email" required />
+              <FormField id="phone" label="Phone" type="tel" />
+              <div className="sm:col-span-2">
+                <FormField id="company" label="Company Name" />
+              </div>
+              <div className="sm:col-span-2">
+                <FormField id="comments" label="Comments" textarea />
+              </div>
+              <div className="sm:col-span-2 mt-2 flex flex-col items-center gap-3">
+                {status === "success" && (
+                  <p className="text-green-400 text-sm text-center">
+                    Thank you — your message has been sent.
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="text-red-400 text-sm text-center">{errorMessage}</p>
+                )}
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="bg-[#095786] hover:bg-[#2484C6] disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-white text-sm font-semibold tracking-wide uppercase px-10 py-3 rounded-md shadow-lg shadow-blue-900/30"
+                >
+                  {status === "loading" ? "Sending…" : "Submit"}
+                </button>
+              </div>
+            </form>
           </div>
-        </form>
-            <div className="w-full max-w-xs shrink-0 text-center md:pt-1">
+
+          <div className="w-full max-w-xs shrink-0 text-center md:pt-1">
               <div className="text-white/80 text-sm sm:text-base space-y-2.5">
                 <p>
                   <a href="tel:+12816088942" className={contactLinkClass}>
@@ -146,7 +124,7 @@ export default function ContactSection() {
                   Houston, TX 77070
                 </address>
               </div>
-            </div>
+          </div>
         </div>
       </div>
     </section>
