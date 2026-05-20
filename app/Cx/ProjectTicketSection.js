@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 const inputClasses =
   "w-full bg-white/5 border border-white/15 rounded-md px-4 py-2.5 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-[#2484C6] focus:bg-white/10 transition-colors";
 
@@ -63,6 +65,32 @@ function SelectField({ id, label, required = false }) {
 }
 
 export default function ProjectTicketSection() {
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    const body = Object.fromEntries(new FormData(e.currentTarget));
+
+    try {
+      const res = await fetch("/api/project-ticket", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Something went wrong.");
+      setStatus("success");
+      e.currentTarget.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(err.message);
+    }
+  }
+
   return (
     <section className="relative bg-black overflow-hidden">
       <div className="relative mx-auto max-w-2xl px-6 sm:px-8 lg:px-12 pt-32 sm:pt-36 md:pt-44 lg:pt-48 pb-16 md:pb-24">
@@ -71,7 +99,7 @@ export default function ProjectTicketSection() {
         </h1>
 
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleSubmit}
           className="mt-12 md:mt-14 flex flex-col gap-5"
         >
           <SelectField id="requestType" label="Request Type" required />
@@ -103,12 +131,21 @@ export default function ProjectTicketSection() {
           <TextField id="platformPreferred" label="What Platform Should be Used" />
           <TextField id="otherPlatform" label="Other Platform" />
 
-          <div className="pt-4">
+          <div className="pt-4 flex flex-col gap-3">
+            {status === "success" && (
+              <p className="text-green-400 text-sm">
+                Thank you — your project ticket has been submitted.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-red-400 text-sm">{errorMessage}</p>
+            )}
             <button
               type="submit"
-              className="bg-[#095786] hover:bg-[#2484C6] transition-colors text-white text-sm font-semibold tracking-wide uppercase px-10 py-3 rounded-md shadow-lg shadow-blue-900/30"
+              disabled={status === "loading"}
+              className="bg-[#095786] hover:bg-[#2484C6] disabled:opacity-60 disabled:cursor-not-allowed transition-colors text-white text-sm font-semibold tracking-wide uppercase px-10 py-3 rounded-md shadow-lg shadow-blue-900/30 w-fit"
             >
-              Submit
+              {status === "loading" ? "Sending…" : "Submit"}
             </button>
           </div>
         </form>
