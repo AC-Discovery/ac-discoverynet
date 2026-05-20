@@ -7,9 +7,11 @@ const services = [
   "Managed Review",
   "eDiscovery Staffing",
   "Trial Prep",
+  "Courtroom Reporting & Deposition Services",
   "Cyber Data Breach & Incident Response Services",
   "Legal Operations & Spend Analysis",
   "AI Discovery Services",
+  "Flexible Legal Talent Solutions",
 ];
 
 const forensics = [
@@ -28,6 +30,8 @@ const info = [
   "About Us",
   "Insights",
   "Meet Our Team",
+  "Events",
+  "Caring Connections Alzheimer's Advocracy",
   "Contact Us",
   "Careers",
   "Privacy Policy",
@@ -185,6 +189,32 @@ export default function Footer() {
                 <SendIcon />
               </button>
             </form>
+
+            <div className="mt-8 text-white/80 text-sm space-y-2">
+              <p>
+                <a
+                  href="tel:+12816088942"
+                  className="text-[#2484C6] hover:text-[#4db3ea] underline underline-offset-2 transition-colors"
+                >
+                  (281) 608-8942
+                </a>
+              </p>
+              <p>
+                <a
+                  href="mailto:info@ac-discovery.net"
+                  className="text-[#2484C6] hover:text-[#4db3ea] underline underline-offset-2 transition-colors"
+                >
+                  info@ac-discovery.net
+                </a>
+              </p>
+              <p className="text-white/75 leading-snug">
+                12340 Jones Road,
+                <br />
+                Suite 140
+                <br />
+                Houston, TX 77070
+              </p>
+            </div>
 
             {/* <SocialIcons /> */}
 
