@@ -32,7 +32,7 @@ const info = [
   "Meet Our Team",
   "Events",
   "Caring Connections Alzheimer's Advocracy",
-  "Contact Us",
+  "Contact",
   "Careers",
   "Privacy Policy",
   "Terms & Conditions",
