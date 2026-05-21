@@ -79,7 +79,7 @@ export default function InsightArticleEarlyCaseIntelligenceContent() {
         spanning forensics, managed review, specialized language teams, staffing,
         trial logistics, and AI-forward workflows. Explore{" "}
         <Link href="/" className={link}>
-          RightDiscovery.com
+          ac-discovery.net
         </Link>{" "}
         or reach the team via{" "}
         <Link href="/contact" className={link}>

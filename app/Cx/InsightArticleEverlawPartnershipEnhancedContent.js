@@ -59,12 +59,12 @@ export default function InsightArticleEverlawPartnershipEnhancedContent() {
         forensics, eDiscovery, analytics, staffing, spend management, cyber readiness, and
         trial prep—always with an eye toward practical innovation. Visit{" "}
         <a
-          href="https://www.rightdiscovery.com"
+          href="https://www.ac-discovery.net"
           className={link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          rightdiscovery.com
+          ac-discovery.net
         </a>{" "}
         and follow us on{" "}
         <a

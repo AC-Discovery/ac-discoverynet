@@ -56,12 +56,12 @@ export default function InsightArticleMarlaMohrContent() {
         response, and AI enablement for law firms, corporate teams, and government
         clients. Learn more at{" "}
         <a
-          href="https://www.rightdiscovery.com"
+          href="https://www.ac-discovery.net"
           className={link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          rightdiscovery.com
+          ac-discovery.net
         </a>{" "}
         and on{" "}
         <a

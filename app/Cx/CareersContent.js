@@ -35,7 +35,7 @@ export default function CareersContent() {
     <section className="relative bg-black">
       <div className="mx-auto max-w-4xl px-6 sm:px-8 lg:px-12 py-16 md:py-24 lg:py-28">
         <h2 className="text-center font-bold leading-[1.1] tracking-tight text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-          Join Right Discovery and Be Part of
+          Join AC Discovery and Be Part of
           <br />
           Something Bigger!
         </h2>

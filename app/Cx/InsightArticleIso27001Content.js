@@ -49,12 +49,12 @@ export default function InsightArticleIso27001Content() {
       <p className="mb-4 text-base leading-relaxed text-white/95 sm:text-lg">
         Learn more at{" "}
         <a
-          href="https://www.rightdiscovery.com"
+          href="https://www.ac-discovery.net"
           className={link}
           target="_blank"
           rel="noopener noreferrer"
         >
-          rightdiscovery.com
+          ac-discovery.net
         </a>
         .
       </p>
