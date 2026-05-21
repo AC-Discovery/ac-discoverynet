@@ -29,6 +29,7 @@ function HexPattern({ side = "left" }) {
 }
 
 export default function ServiceRow({
+  id,
   Icon,
   title,
   description,
@@ -36,7 +37,7 @@ export default function ServiceRow({
   showDivider = true,
 }) {
   return (
-    <section className="relative bg-black overflow-hidden">
+    <section id={id} className="relative bg-black overflow-hidden scroll-mt-24">
       <HexPattern side={hexSide} />
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16 py-10 md:py-12 lg:py-16">

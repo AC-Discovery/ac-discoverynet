@@ -21,6 +21,7 @@ function ArrowIcon() {
 }
 
 export default function TechnologyRow({
+  id,
   screenSrc,
   screenWidth,
   screenHeight,
@@ -35,7 +36,7 @@ export default function TechnologyRow({
   logoClassName = "h-10 md:h-12 lg:h-14 w-auto object-contain",
 }) {
   return (
-    <section className="bg-black px-4 sm:px-6 lg:px-10 py-6 md:py-8">
+    <section id={id} className="bg-black px-4 sm:px-6 lg:px-10 py-6 md:py-8 scroll-mt-24">
       <div
         className={`mx-auto max-w-7xl rounded-[28px] md:rounded-[36px] px-6 sm:px-10 md:px-14 lg:px-16 py-10 md:py-14 lg:py-16 ${cardClassName}`}
       >

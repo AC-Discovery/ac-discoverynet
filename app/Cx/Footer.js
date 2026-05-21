@@ -3,39 +3,47 @@
 import Image from "next/image";
 
 const services = [
-  "Hosting",
-  "Managed Review",
-  "eDiscovery Staffing",
-  "Trial Prep",
-  "Courtroom Reporting & Deposition Services",
-  "Cyber Data Breach & Incident Response Services",
-  "Legal Operations & Spend Analysis",
-  "AI Discovery Services",
-  "Flexible Legal Talent Solutions",
+  { label: "Hosting", href: "/services#processing-hosting" },
+  { label: "Managed Review", href: "/services#document-review" },
+  { label: "eDiscovery Staffing", href: "/services#ediscovery-staffing" },
+  { label: "Trial Prep", href: "/services#trial-services" },
+  {
+    label: "Courtroom Reporting & Deposition Services",
+    href: "/services#courtroom-reporting-deposition",
+  },
+  {
+    label: "Cyber Data Breach & Incident Response Services",
+    href: "/services#cyber-data-breach-incident-response",
+  },
+  {
+    label: "Legal Operations & Spend Analysis",
+    href: "/services#legal-operations-spend-analysis",
+  },
+  { label: "AI Discovery Services", href: "/services#ai-discovery" },
+  {
+    label: "Flexible Legal Talent Solutions",
+    href: "/services#flexible-legal-talent",
+  },
 ];
 
 const forensics = [
-  "Digital Data Collection",
-  "Digital Forensic Analysis",
-  "Expert Testimony",
+  { label: "Digital Data Collection", href: "/forensics" },
+  { label: "Digital Forensic Analysis", href: "/forensics" },
+  { label: "Expert Testimony", href: "/forensics" },
 ];
 
 const technology = [
-  "RelativityOne",
-  "Everlaw",
-  "eDiscovery AI",
+  { label: "RelativityOne", href: "/technology#relativityone" },
+  { label: "Everlaw", href: "/technology#everlaw" },
+  { label: "eDiscovery AI", href: "/technology#ediscovery-ai" },
 ];
 
 const info = [
-  "About Us",
-  "Insights",
-  "Meet Our Team",
-  "Events",
-  "Caring Connections Alzheimer's Advocracy",
-  "Contact",
-  "Careers",
-  "Privacy Policy",
-  "Terms & Conditions",
+  { label: "About Us", href: "/about" },
+  { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
+  { label: "Careers", href: "/careers" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 function FooterColumn({ title, items }) {
@@ -45,16 +53,20 @@ function FooterColumn({ title, items }) {
         {title}
       </h4>
       <ul className="mt-5 space-y-3">
-        {items.map((item) => (
-          <li key={item}>
-            <a
-              href="#"
-              className="text-white/75 hover:text-white text-sm leading-snug transition-colors"
-            >
-              {item}
-            </a>
-          </li>
-        ))}
+        {items.map((item) => {
+          const label = typeof item === "string" ? item : item.label;
+          const href = typeof item === "string" ? "#" : item.href;
+          return (
+            <li key={label}>
+              <a
+                href={href}
+                className="text-white/75 hover:text-white text-sm leading-snug transition-colors"
+              >
+                {label}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
