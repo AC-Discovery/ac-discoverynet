@@ -90,19 +90,19 @@ const services = [
     title: "Trial Services",
     description: `AC Discovery delivers comprehensive trial support, from pre-trial preparation to verdict, ensuring your team is equipped for success in the courtroom. Our expert consultants provide tailored strategies, manage evidence preparation, and coordinate trial logistics to strengthen your case. We offer dedicated war room support, including seamless organization of materials and on-the-spot problem-solving, as well as "hot seat" operators for real-time exhibit presentation and technology management during proceedings. By identifying key opportunities and proactively addressing challenges, we ensure your team can focus on presenting a compelling narrative and achieving the best possible outcome.`,
   },
-  {
-    id: "courtroom-reporting-deposition",
-    Icon: CourtroomReportingIcon,
-    hexSide: "right",
-    title: (
-      <>
-        Courtroom Reporting &amp;
-        <br />
-        Deposition Services
-      </>
-    ),
-    description: `AC Discovery delivers comprehensive Courtroom Reporting and Deposition Services, offering cutting-edge solutions for both in-person and remote legal proceedings. We provide expert court reporters, certified stenographers, and skilled legal videographers equipped with state-of-the-art technology to ensure precise, real-time documentation of depositions, hearings, and trials. Our services include verbatim transcription, real-time reporting, legal videography, and detailed deposition summaries. We excel in managing complex multi-party depositions and offer flexible scheduling for last-minute requests. Our secure digital platforms facilitate seamless remote and hybrid proceedings, allowing for efficient collaboration and document sharing. With a commitment to accuracy, confidentiality, and timeliness, we deliver high-quality transcripts and video recordings that meet the most stringent legal standards. Whether you require on-site support or virtual solutions, our team ensures smooth, professional, and reliable documentation services tailored to your specific case needs.`,
-  },
+  // {
+  //   id: "courtroom-reporting-deposition",
+  //   Icon: CourtroomReportingIcon,
+  //   hexSide: "right",
+  //   title: (
+  //     <>
+  //       Courtroom Reporting &amp;
+  //       <br />
+  //       Deposition Services
+  //     </>
+  //   ),
+  //   description: `AC Discovery delivers comprehensive Courtroom Reporting and Deposition Services, offering cutting-edge solutions for both in-person and remote legal proceedings. We provide expert court reporters, certified stenographers, and skilled legal videographers equipped with state-of-the-art technology to ensure precise, real-time documentation of depositions, hearings, and trials. Our services include verbatim transcription, real-time reporting, legal videography, and detailed deposition summaries. We excel in managing complex multi-party depositions and offer flexible scheduling for last-minute requests. Our secure digital platforms facilitate seamless remote and hybrid proceedings, allowing for efficient collaboration and document sharing. With a commitment to accuracy, confidentiality, and timeliness, we deliver high-quality transcripts and video recordings that meet the most stringent legal standards. Whether you require on-site support or virtual solutions, our team ensures smooth, professional, and reliable documentation services tailored to your specific case needs.`,
+  // },
   {
     id: "cyber-data-breach-incident-response",
     Icon: CyberShieldIcon,

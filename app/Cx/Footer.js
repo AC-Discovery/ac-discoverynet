@@ -8,10 +8,6 @@ const services = [
   { label: "eDiscovery Staffing", href: "/services#ediscovery-staffing" },
   { label: "Trial Prep", href: "/services#trial-services" },
   {
-    label: "Courtroom Reporting & Deposition Services",
-    href: "/services#courtroom-reporting-deposition",
-  },
-  {
     label: "Cyber Data Breach & Incident Response Services",
     href: "/services#cyber-data-breach-incident-response",
   },
