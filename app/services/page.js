@@ -116,19 +116,19 @@ const services = [
     ),
     description: `When a cyber breach occurs, swift and secure action is critical to manage legal, regulatory, and compliance obligations. AC Discovery specializes in identifying, preserving, and producing Electronically Stored Information (ESI) to support legal investigations, reporting to governing bodies, and notifying affected individuals. Leveraging advanced AI tools, document recognition technologies, and a team of seasoned experts, we deliver precise, timely analysis and comprehensive support throughout the incident response and data discovery process.`,
   },
-  {
-    id: "legal-operations-spend-analysis",
-    Icon: LegalOpsIcon,
-    hexSide: "right",
-    title: (
-      <>
-        Legal Operations &amp; Spend
-        <br />
-        Analysis
-      </>
-    ),
-    description: `Legal Operations and Spend Analysis are crucial components of modern legal departments, focusing on optimizing efficiency and cost-effectiveness. Our company specializes in providing comprehensive Legal Spend Analysis services, leveraging advanced data analytics and industry benchmarks to help general counsels make informed decisions about their legal expenditures. We assist clients in implementing robust legal spend management strategies, including the development of preferred law firm panels, negotiation of alternative fee arrangements, and utilization of e-billing systems. Our expertise extends to right-sourcing strategies, helping clients allocate work to the most cost-effective providers without compromising quality. By offering insights into spending patterns, identifying areas for cost reduction, and providing actionable recommendations, we enable our clients to achieve significant savings while maintaining high-quality legal services.`,
-  },
+  // {
+  //   id: "legal-operations-spend-analysis",
+  //   Icon: LegalOpsIcon,
+  //   hexSide: "right",
+  //   title: (
+  //     <>
+  //       Legal Operations &amp; Spend
+  //       <br />
+  //       Analysis
+  //     </>
+  //   ),
+  //   description: `Legal Operations and Spend Analysis are crucial components of modern legal departments, focusing on optimizing efficiency and cost-effectiveness. Our company specializes in providing comprehensive Legal Spend Analysis services, leveraging advanced data analytics and industry benchmarks to help general counsels make informed decisions about their legal expenditures. We assist clients in implementing robust legal spend management strategies, including the development of preferred law firm panels, negotiation of alternative fee arrangements, and utilization of e-billing systems. Our expertise extends to right-sourcing strategies, helping clients allocate work to the most cost-effective providers without compromising quality. By offering insights into spending patterns, identifying areas for cost reduction, and providing actionable recommendations, we enable our clients to achieve significant savings while maintaining high-quality legal services.`,
+  // },
 ];
 
 export default function ServicesPage() {

@@ -72,7 +72,7 @@ export default function TechnologyRow({
               {description}
             </p>
             <Link
-              href="/contact"
+              href="#"
               aria-label={`Contact us about ${logoAlt}`}
               className={`inline-flex items-center mt-8 transition-colors ${arrowLinkClassName}`}
             >

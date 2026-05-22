@@ -22,17 +22,22 @@ function CloseIcon() {
 
 export default function ForensicsModal({ item, onClose }) {
   useEffect(() => {
+    if (!item) return;
+
     const onKeyDown = (e) => {
       if (e.key === "Escape") onClose();
     };
+
     document.addEventListener("keydown", onKeyDown);
+
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = prevOverflow;
     };
-  }, [onClose]);
+  }, [item, onClose]);
 
   if (!item) return null;
 
@@ -80,6 +85,7 @@ export default function ForensicsModal({ item, onClose }) {
             >
               {title}
             </h2>
+
             <p className="mt-4 text-black text-sm sm:text-[15px] leading-relaxed">
               {description}
             </p>

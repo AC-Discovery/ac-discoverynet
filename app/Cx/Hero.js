@@ -116,9 +116,9 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-8 lg:px-16 xl:px-20 pt-28 md:pt-44 lg:pt-48 pb-16 min-h-screen flex flex-col justify-center">
         <div className="max-w-3xl">
           <h1 className="text-white font-bold leading-[1.05] tracking-tight text-3xl md:text-4xl lg:text-5xl">
-            Solving Problems
+            Solving Complex Problems
             <br />
-            <span className="font-extralight">Without Forcing Solutions</span>
+            <span className="font-extralight">With Thoughtful Solutions</span>
           </h1>
 
           <div className="mt-6 flex items-start gap-4 max-w-md">

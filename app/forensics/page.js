@@ -8,8 +8,8 @@ export default function ForensicsPage() {
     <main className="relative bg-black">
       <Nav />
       <ForensicsHero />
-      <Connect/>
-      <Footer/>
+      <Connect />
+      <Footer />
     </main>
   );
 }

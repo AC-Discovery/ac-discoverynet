@@ -11,10 +11,10 @@ const services = [
     label: "Cyber Data Breach & Incident Response Services",
     href: "/services#cyber-data-breach-incident-response",
   },
-  {
-    label: "Legal Operations & Spend Analysis",
-    href: "/services#legal-operations-spend-analysis",
-  },
+  // {
+  //   label: "Legal Operations & Spend Analysis",
+  //   href: "/services#legal-operations-spend-analysis",
+  // },
   { label: "AI Discovery Services", href: "/services#ai-discovery" },
   {
     label: "Flexible Legal Talent Solutions",

@@ -58,8 +58,8 @@ export default function CareersContent() {
           our growing team and help us push boundaries. If you&apos;re ready to
           grow, learn, and make an impact, we want you on board! Apply by sending
           your resume to{" "}
-          <a href="mailto:staffing@acdiscovery.com" className={mailLink}>
-            staffing@acdiscovery.com
+          <a href="mailto:info@ac-discovery.net" className={mailLink}>
+            info@ac-discovery.net
           </a>
           .
         </p>
@@ -186,8 +186,8 @@ export default function CareersContent() {
           AC Discovery is seeking talented and professional attorneys for upcoming
           Document Review opportunities. Ongoing need. Please apply now to join our
           roster for upcoming reviews. Apply by sending your resume to{" "}
-          <a href="mailto:staffing@acdiscovery.com" className={mailLink}>
-            staffing@acdiscovery.com
+          <a href="mailto:info@ac-discovery.net" className={mailLink}>
+            info@ac-discovery.net
           </a>
           .
         </p>
