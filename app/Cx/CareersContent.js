@@ -118,7 +118,7 @@ export default function CareersContent() {
         <SubHeading>I. Job Specifications:</SubHeading>
         <JobList
           items={[
-            "Providing end-to-end oversight of discovery matters and serving as primary client point of contact.",
+            "Provide end-to-end oversight of discovery matters and serving as primary client point of contact.",
             "Creating and maintaining project schedules and workflows.",
             "Planning and managing project communications.",
             "Forecasting, tracking and managing project budgets and invoices.",
