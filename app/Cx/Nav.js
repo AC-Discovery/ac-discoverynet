@@ -24,8 +24,8 @@ function isActive(pathname, href) {
 function ChevronRight() {
   return (
     <svg
-      width="14"
-      height="14"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -154,7 +154,7 @@ export default function Nav() {
               <li key={item.label} className="flex items-center">
                 <Link
                   href={item.href}
-                  className={`px-3 py-1.5 text-[13px] xl:text-sm font-medium transition-colors rounded-full ${
+                  className={`px-3 py-1.5 text-base font-medium transition-colors rounded-full ${
                     active
                       ? "text-[#2484C6]"
                       : "text-gray-700 hover:text-[#2484C6]"
@@ -219,7 +219,7 @@ export default function Nav() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className={`block px-5 py-3 text-sm font-medium transition-colors ${
+                    className={`block px-5 py-3 text-base font-medium transition-colors ${
                       active
                         ? "text-[#2484C6] bg-[#2484C6]/5"
                         : "text-gray-700 hover:text-[#2484C6] hover:bg-black/5"

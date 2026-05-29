@@ -34,7 +34,7 @@ export default function Vision() {
             </h2>
           </div>
           <div className="md:col-span-4 md:pt-3">
-            <p className="text-white/85 text-sm md:text-[15px] leading-relaxed max-w-sm">
+            <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-sm">
               Start your project off right with a team of dependable digital
               forensics experts.
             </p>
@@ -51,7 +51,7 @@ export default function Vision() {
                     <button
                       type="button"
                       onClick={() => setActiveTab(tab)}
-                      className={`text-sm font-medium transition-colors ${
+                      className={`text-base font-medium transition-colors ${
                         active
                           ? "text-white"
                           : "text-white/55 hover:text-white/80"
@@ -93,13 +93,13 @@ export default function Vision() {
             <h3 className="text-white text-xl md:text-2xl font-medium leading-snug max-w-xs">
               Our focus is on providing reliable forensic support
             </h3>
-            <p className="text-white/75 text-sm leading-relaxed mt-5 max-w-xs">
+            <p className="text-white/75 text-base leading-relaxed mt-5 max-w-xs">
               We keep your data secure and defensible. Our team will help guide
               you through the digital forensic process and offer support
             </p>
             <button
               type="button"
-              className="mt-5 text-white text-sm font-medium hover:text-white/70 transition-colors"
+              className="mt-5 text-white text-base font-medium hover:text-white/70 transition-colors"
             >
               Learn More
             </button>
@@ -118,7 +118,7 @@ export default function Vision() {
                 <p className="text-white text-sm md:text-base font-medium">
                   Jane doe
                 </p>
-                <p className="text-white/70 text-xs md:text-sm mt-0.5">CEO</p>
+                <p className="text-white/70 text-sm md:text-base mt-0.5">CEO</p>
               </div>
             </div>
           </div>

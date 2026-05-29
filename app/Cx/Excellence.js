@@ -5,7 +5,7 @@ function LitigationFloatingCard() {
     <div className="absolute -right-6 bottom-4 md:-right-16 lg:-right-24 md:bottom-8 rounded-xl bg-black/50 backdrop-blur-md border border-white/10 px-4 py-3 w-[160px] md:w-[180px]">
       <div className="flex items-center gap-2">
         <span className="w-1.5 h-1.5 rounded-full bg-white" />
-        <p className="text-white text-xs md:text-sm font-medium">
+        <p className="text-white text-sm md:text-base font-medium">
           Litigation solutions
         </p>
       </div>
@@ -62,7 +62,7 @@ function KnowledgeCard() {
   return (
     <div className="rounded-2xl bg-[#004972] p-6 md:p-7 text-white">
       <h3 className="text-lg md:text-xl font-semibold">Our Knowledge</h3>
-      <p className="text-white/85 text-xs md:text-sm leading-relaxed mt-3">
+      <p className="text-white/85 text-sm md:text-base leading-relaxed mt-3">
         Our legal tech experts have the knowledge within the litigation support
         industry which serves as the foundation to solving our clients
         eDiscovery problems.
@@ -84,7 +84,7 @@ export default function Excellence() {
             </h2>
           </div>
           <div className="md:col-span-4 md:pt-3">
-            <p className="text-white/65 text-sm md:text-[15px] leading-relaxed max-w-md">
+            <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-md">
               Our team of consultants utilize their decades of expertise to
               curate solutions from an array of technology options.
             </p>
@@ -111,16 +111,16 @@ export default function Excellence() {
           </div>
 
           <div className="md:col-span-4 lg:col-span-4">
-            <p className="text-white text-base md:text-lg lg:text-xl font-medium leading-snug uppercase tracking-wide">
+            <p className="text-white text-lg md:text-xl lg:text-2xl font-medium leading-snug uppercase tracking-wide">
               We ensure the right fit for your eDiscovery needs.
             </p>
             <div className="md:pl-10 lg:pl-16">
-              <p className="text-white/60 text-sm leading-relaxed mt-6 max-w-xs">
+              <p className="text-white/60 text-base leading-relaxed mt-6 max-w-xs">
                 Tech experts who collectively have over 20 years of knowledge
               </p>
               <button
                 type="button"
-                className="mt-4 text-white text-sm font-medium hover:text-[#2484C6] transition-colors"
+                className="mt-4 text-white text-base font-medium hover:text-[#2484C6] transition-colors"
               >
                 Learn More
               </button>
@@ -134,7 +134,7 @@ export default function Excellence() {
                 <p className="text-white text-3xl md:text-4xl lg:text-5xl font-semibold">
                   88%
                 </p>
-                <p className="text-white/65 text-xs md:text-sm leading-snug mt-2">
+                <p className="text-white/65 text-sm md:text-base leading-snug mt-2">
                   Leading Through
                   <br />
                   The Right Solutions

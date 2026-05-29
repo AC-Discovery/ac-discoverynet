@@ -128,15 +128,15 @@ function ServiceCard({ Icon, title, description }) {
       <h3 className="text-white text-base md:text-lg font-medium mt-5">
         {title}
       </h3>
-      <p className="text-white/60 text-xs md:text-sm leading-relaxed mt-3 max-w-[240px]">
+      <p className="text-white/60 text-sm md:text-base leading-relaxed mt-3 max-w-[240px]">
         {description}
       </p>
-      <button
+      {/* <button
         type="button"
-        className="mt-7 text-white text-xs md:text-sm font-medium hover:text-[#2484C6] transition-colors"
+        className="mt-7 text-white text-sm md:text-base font-medium hover:text-[#2484C6] transition-colors"
       >
         Learn More
-      </button>
+      </button> */}
     </div>
   );
 }

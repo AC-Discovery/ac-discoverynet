@@ -7,14 +7,14 @@ function StatsCard() {
         <p className="text-white text-3xl md:text-4xl font-semibold">120k+</p>
         <p className="text-white text-3xl md:text-4xl font-semibold">90%</p>
       </div>
-      <p className="text-white/80 text-sm leading-relaxed mt-5 max-w-sm">
+      <p className="text-white/80 text-base leading-relaxed mt-5 max-w-sm">
         Law firms &amp; Corporations. Headquartered in Dallas, with a
         nationwide presence, our team specializes in litigation &amp;
         investigations support of cloud-based software.
       </p>
       <button
         type="button"
-        className="mt-6 text-white text-sm font-medium hover:text-white/70 transition-colors"
+        className="mt-6 text-white text-base font-medium hover:text-white/70 transition-colors"
       >
         Learn More
       </button>
@@ -25,10 +25,10 @@ function StatsCard() {
 function OutcomeStep({ number, text }) {
   return (
     <div className="flex items-start gap-5">
-      <span className="text-white/85 text-sm font-medium pt-0.5 shrink-0">
+      <span className="text-white/85 text-base font-medium pt-0.5 shrink-0">
         {number}
       </span>
-      <p className="text-white/85 text-sm leading-relaxed">{text}</p>
+      <p className="text-white/85 text-base leading-relaxed">{text}</p>
     </div>
   );
 }
@@ -66,7 +66,7 @@ export default function Solutions() {
             </h2>
           </div>
           <div className="md:col-span-4 md:pt-3">
-            <p className="text-white/85 text-sm md:text-[15px] leading-relaxed max-w-sm">
+            <p className="text-white/85 text-base sm:text-lg leading-relaxed max-w-sm">
               We aren&apos;t here to simply push a product. Our team of experts
               are well versed in today&apos;s legal technology tools and best
               practices.

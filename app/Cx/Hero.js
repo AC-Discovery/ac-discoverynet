@@ -15,7 +15,7 @@ function StatChip() {
       />
       <div className="leading-tight">
         <p className="text-white text-lg font-semibold">12+</p>
-        <p className="text-white/70 text-xs">Client Satisfaction</p>
+        <p className="text-white/70 text-sm">Client Satisfaction</p>
       </div>
     </div>
   );
@@ -26,13 +26,13 @@ function StatsCard() {
     <div className="mt-8 flex flex-col gap-4 px-5 py-4 md:inline-flex md:flex-row md:items-stretch md:gap-10 md:px-7 md:py-5 rounded-2xl bg-black/30 backdrop-blur-md border border-white/10">
       <div>
         <p className="text-white text-2xl md:text-4xl font-semibold">85%</p>
-        <p className="text-white/70 text-xs md:text-sm mt-1">
+        <p className="text-white/70 text-sm md:text-base mt-1">
           Digital Litigation Success
         </p>
       </div>
       <div>
         <p className="text-white text-2xl md:text-4xl font-semibold">98%</p>
-        <p className="text-white/70 text-xs md:text-sm mt-1">
+        <p className="text-white/70 text-sm md:text-base mt-1">
           Empowering Digital Growth
         </p>
       </div>
@@ -45,7 +45,7 @@ function LegalOpsBox() {
     <div className="rounded-2xl bg-black/35 backdrop-blur-md border border-white/10 px-5 py-4 w-full md:w-[200px]">
       <div className="flex items-center gap-2">
         <span className="w-1.5 h-1.5 rounded-full bg-white" />
-        <p className="text-white text-sm font-medium">Legal Operations</p>
+        <p className="text-white text-base font-medium">Legal Operations</p>
       </div>
       <svg
         viewBox="0 0 160 50"
@@ -66,7 +66,7 @@ function ProcessingBox() {
   return (
     <div className="rounded-2xl bg-black/35 backdrop-blur-md border border-white/10 px-6 py-5 w-full md:w-[180px]">
       <p className="text-white text-3xl font-semibold">100+</p>
-      <p className="text-white/70 text-xs mt-1 leading-snug">
+      <p className="text-white/70 text-sm mt-1 leading-snug">
         Processing
         <br />
         Solutions
@@ -124,7 +124,7 @@ export default function Hero() {
 
           <div className="mt-6 flex items-start gap-4 max-w-md">
             <span className="block w-[3px] self-stretch bg-[#004972] rounded-full" />
-            <p className="text-white/75 text-sm sm:text-[15px] leading-relaxed">
+            <p className="text-white/75 text-base sm:text-lg leading-relaxed">
               Technology consultants, finding the right solutions for all your
               litigation needs
             </p>
