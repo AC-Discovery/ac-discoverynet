@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function StatChip() {
   return (
@@ -130,12 +131,12 @@ export default function Hero() {
           </div>
 
           <div className="mt-8 flex items-center gap-6">
-            <button
-              type="button"
+            <Link
+              href="/services"
               className="bg-[#095786] hover:bg-[#2484C6] transition-colors text-white text-sm font-medium px-6 py-2.5 rounded-md shadow-lg shadow-blue-900/30"
             >
               Learn More
-            </button>
+            </Link>
             <StatChip />
           </div>
 
