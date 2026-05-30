@@ -83,8 +83,7 @@ export default function Excellence() {
           </div>
           <div className="md:col-span-4 md:pt-3">
             <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-md">
-              Our team of consultants utilize their decades of expertise to
-              curate solutions from an array of technology options.
+              Our consultants leverage decades of industry experience to identify and implement the technology solutions best aligned with our clients' objectives.
             </p>
           </div>
         </div>
