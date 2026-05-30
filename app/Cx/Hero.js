@@ -125,8 +125,7 @@ export default function Hero() {
           <div className="mt-6 flex items-start gap-4 max-w-md">
             <span className="block w-[3px] self-stretch bg-[#004972] rounded-full" />
             <p className="text-white/75 text-base sm:text-lg leading-relaxed">
-              Technology consultants, finding the right solutions for all your
-              litigation needs
+              Legal technology consultants delivering tailored solutions for every litigation challenge
             </p>
           </div>
 
