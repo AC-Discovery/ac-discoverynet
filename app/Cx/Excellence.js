@@ -113,7 +113,7 @@ export default function Excellence() {
             </p>
             <div className="md:pl-10 lg:pl-16">
               <p className="text-white/60 text-base leading-relaxed mt-6 max-w-xs">
-                Tech experts who collectively have over 20 years of knowledge
+                Experienced technology consultants leveraging over eight decades of industry knowledge.
               </p>
               <button
                 type="button"
