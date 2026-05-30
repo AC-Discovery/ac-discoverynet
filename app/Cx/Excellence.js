@@ -63,9 +63,7 @@ function KnowledgeCard() {
     <div className="rounded-2xl bg-[#004972] p-6 md:p-7 text-white">
       <h3 className="text-lg md:text-xl font-semibold">Our Knowledge</h3>
       <p className="text-white/85 text-sm md:text-base leading-relaxed mt-3">
-        Our legal tech experts have the knowledge within the litigation support
-        industry which serves as the foundation to solving our clients
-        eDiscovery problems.
+        With deep industry knowledge and technical proficiency, our legal technology professionals provide strategic guidance and innovative solutions across the eDiscovery lifecycle.
       </p>
     </div>
   );
