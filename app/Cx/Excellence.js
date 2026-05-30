@@ -76,9 +76,9 @@ export default function Excellence() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
           <div className="md:col-span-8">
             <h2 className="text-white font-semibold leading-[1.05] tracking-tight text-3xl sm:text-4xl md:text-5xl lg:text-[56px]">
-              Striving for Excellence,
+              Committed to Excellence. 
               <br />
-              Delivering Results
+              Driven by Results.
             </h2>
           </div>
           <div className="md:col-span-4 md:pt-3">
