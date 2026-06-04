@@ -1,5 +1,6 @@
 import "./globals.css";
 import { PoppinsFont } from "./Font/font";
+import GoogleAnalytics from "./Cx/GoogleAnalytics";
 
 export const metadata = {
   title: "E-Discovery Services",
@@ -12,7 +13,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${PoppinsFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-poppins">{children}</body>
+      <body className="min-h-full flex flex-col font-poppins">
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
